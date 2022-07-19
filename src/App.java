@@ -30,9 +30,15 @@ public class App {
         // Exibir e manipular os dados.
 
         for ( Map<String, String> filme: listaDeFilmes) {
-            System.out.println("Título: "+ filme.get("title"));
-            System.out.println("Poster: "+ filme.get("image"));
-            System.out.println("Classificação: "+ filme.get("imDbRating"));
+            System.out.println("\u001b[3mTítulo: \u001b[m\u001b[1m"+ filme.get("title")+ "\u001b[m");
+            System.out.println("\u001b[3mPoster: \u001b[m\u001b[1m"+ filme.get("image")+ "\u001b[m");
+            System.out.println("\u001b[45m\u001b[3mClassificação: \u001b[m\u001b[45m\u001b[1m"+ filme.get("imDbRating")+ " \u001b[m");
+            int classificacao = (int) Float.parseFloat(filme.get("imDbRating"));
+            String stars = "";            
+            for(int i = 0; i<classificacao; i++) {
+                stars = stars + "\u2B50";
+            }
+            System.out.println(stars);
             System.out.println();
         }
     }
