@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
-import java.nio.file.Path;
 
 import javax.imageio.ImageIO;
 
@@ -29,7 +28,9 @@ public class GeradorDeFiguirinhas {
 
         // escrever uma frase na nova imagem
 
-        graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 64));
+        //var font = new Font("Comic Sans MS", Font.BOLD, 64);
+        var font = new Font("Impact", Font.BOLD, 64);
+        graphics.setFont(font);
         graphics.setColor(Color.darkGray);
         graphics.drawString("TOPZERA", 20, novaAltura - 100);
 
