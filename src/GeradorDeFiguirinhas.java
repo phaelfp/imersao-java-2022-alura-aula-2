@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
+import java.nio.file.Path;
 
 import javax.imageio.ImageIO;
 
@@ -31,6 +32,13 @@ public class GeradorDeFiguirinhas {
         graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 64));
         graphics.setColor(Color.darkGray);
         graphics.drawString("TOPZERA", 20, novaAltura - 100);
+
+        // Verificar se o diretório existe
+        var Path = new File("saida");
+
+        if (!Path.exists()) {
+            Path.mkdirs();
+        }
 
         // salvar a nova imagem da memória em um arquivo
         ImageIO.write(imgNova, "png", new File("saida/" + nomeArquivo));
