@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/rfpereira/alura/imersao-java-2022/aula-2/alura-stickers'
+make: Entering directory '/home/rfpereira/alura/imersao-java-2022/alura-stickers'
 javac -classpath ./lib/gson-2.9.0.jar src/*.java -d bin
 java -classpath ./lib/gson-2.9.0.jar:./bin App
-make: Leaving directory '/home/rfpereira/alura/imersao-java-2022/aula-2/alura-stickers'
+make: Leaving directory '/home/rfpereira/alura/imersao-java-2022/alura-stickers'
  

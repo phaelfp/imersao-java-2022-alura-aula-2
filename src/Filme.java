@@ -1,13 +1,13 @@
 public class Filme {
-    String id;
-    String rank;
-    String title;
-    String fullTitle;
-    String year;
-    String image;
-    String crew;
-    String imDbRating;
-    String imDbRatingCount;
+    private String id;
+    private String rank;
+    private String title;
+    private String fullTitle;
+    private String year;
+    private String image;
+    private String crew;
+    private String imDbRating;
+    private String imDbRatingCount;
 
     public String getId() {
         return this.id;
