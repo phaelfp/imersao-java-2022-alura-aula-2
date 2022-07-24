@@ -11,7 +11,7 @@ public class App {
         // Fazer uma conexão HTTP e buscar 3 fotos da nasa
         // String url = "https://api.mocki.io/v2/549a5d8b/NASA-APOD";
 
-        String url = "http://localhost:8080/linguagens";
+        String url = "https://rfpereira-linguagens-api.herokuapp.com/linguagens";
         
         var httpBody = new ClienteHttp().buscaDados(url);
 
