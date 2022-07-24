@@ -7,16 +7,18 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         // Fazer uma conexão HTTP e buscar os 10 primeiros filmes do top 250 filmes
-        //String url = "https://raw.githubusercontent.com/alexfelipe/imersao-java/json/top250.json";
+        // String url = "https://raw.githubusercontent.com/alexfelipe/imersao-java/json/top250.json";
         // Fazer uma conexão HTTP e buscar 3 fotos da nasa
-        String url = "https://api.mocki.io/v2/549a5d8b/NASA-APOD";
+        // String url = "https://api.mocki.io/v2/549a5d8b/NASA-APOD";
+
+        String url = "http://localhost:8080/linguagens";
         
         var httpBody = new ClienteHttp().buscaDados(url);
 
         // Imprimir o JSON recuperado.
         // System.out.println(body);
 
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaLinguagem();
 
         List<Conteudo> listaDeConteudo = extrator.extraiConteudos(httpBody);
 
